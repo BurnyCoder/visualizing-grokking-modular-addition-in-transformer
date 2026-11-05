@@ -121,8 +121,8 @@ for the preregistered tests. In short:
     it leaves out jointly cost 1.6–2.8× (limit 1.5×).
   - Patching recovers 0.997 [0.995, 0.998] of the logit difference across seeds.
 - **Exploratory:** our seed 0 starts from the paper's initial weights, identical up to float32 rounding (max |Δ| =
-  3.0 × 10⁻⁸). It diverges numerically within ~50 steps,
-  yet ends with the paper's key frequencies.
+  3.0 × 10⁻⁸). Its training loss matches the paper's to 5 significant digits for the first 52 steps and then
+  diverges, yet it ends with the paper's key frequencies (a single same-initialisation pair).
 - **Exploratory dynamics** (gradients, and Adam's step rebuilt from the saved Adam states). During circuit formation the
   training-loss gradient opposes the test-loss gradient. At the end, Adam's loss step and the weight-decay step are
   nearly equal and opposite. Weight decay outweighs the loss step most within 1,000 steps of grokking in 10 of 11 seeds.
