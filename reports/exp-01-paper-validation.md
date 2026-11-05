@@ -38,7 +38,7 @@ unknown split. The match also proves that we reconstructed the exact training sp
 
 All 30 rows are in [`tables/exp01_rchecks.md`](tables/exp01_rchecks.md). **26 of 30 match** within the stated
 tolerances. Two of the rows check claims about the training trajectory rather than the final model:
-- **R15:** the sum of squared weights at the paper's phase boundaries falls 3,373 → 2,001 → 996. It falls faster per
+- **R15:** the sum of squared weights at the paper's phase boundaries falls 3,373 → 2,001 → 995. It falls faster per
   step during cleanup (0.22) than during circuit formation (0.17), as in the paper's Fig. 7, which gives no numbers.
 - **R20:** ARENA's late-phase observations (§3 "Analysis During Training"). Total SSW goes from 955.4 at step 40,001
   to 941.8 at the last checkpoint (ARENA: 955 → 942). Between steps 40,001 and 45,001, heads 0 and 2 go from 0.4 % to
