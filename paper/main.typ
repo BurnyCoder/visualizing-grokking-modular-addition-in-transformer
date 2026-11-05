@@ -23,8 +23,8 @@
   transformer, with a preregistered multi-seed replication]
   #v(6pt)
   Libor Burian \
-  #link("https://burnycoder.github.io/visualizing-grokking-modular-addition/")[burnycoder.github.io/visualizing-grokking-modular-addition] ·
-  #link("https://github.com/BurnyCoder/visualizing-grokking-modular-addition")[code]
+  #link("https://burnycoder.github.io/visualizing-grokking-modular-addition-in-transformer/")[burnycoder.github.io/visualizing-grokking-modular-addition-in-transformer] ·
+  #link("https://github.com/BurnyCoder/visualizing-grokking-modular-addition-in-transformer")[code]
 ]
 
 #block(inset: (x: 1.2em, y: 0.4em))[
@@ -331,7 +331,7 @@ weights; the pipeline, data and preregistration make it reproducible.
 #pagebreak()
 #heading(numbering: none)[Appendix A: Reproducibility]
 
-Code, data formats and the full pipeline: `github.com/BurnyCoder/visualizing-grokking-modular-addition`
+Code, data formats and the full pipeline: `github.com/BurnyCoder/visualizing-grokking-modular-addition-in-transformer`
 (`uv run grokviz --phases all`). Runs: Hugging Face `BurnyCoder/grokking-modular-addition-runs`; site data:
 `BurnyCoder/grokking-modular-addition-site-data`. Hardware: one RTX 5070 Laptop GPU; training of all 22 runs takes
 ≈ 73 minutes, per-checkpoint analysis of those 22 runs ≈ 72 minutes (the paper run's 500 checkpoints ≈ 3 minutes).

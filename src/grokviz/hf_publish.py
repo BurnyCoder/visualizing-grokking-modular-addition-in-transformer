@@ -28,7 +28,7 @@ from grokviz.config import REPO_ROOT  # lock file location
 from grokviz.context import PipelineContext  # phase argument
 
 log = logging.getLogger("grokviz.hf_publish")
-GITHUB_URL = "https://github.com/BurnyCoder/visualizing-grokking-modular-addition"
+GITHUB_URL = "https://github.com/BurnyCoder/visualizing-grokking-modular-addition-in-transformer"
 
 MODEL_CARD = """---
 license: mit
@@ -64,7 +64,7 @@ tags: [grokking, mechanistic-interpretability, modular-arithmetic, transformer]
 ---
 # Grokking modular addition — website data
 
-The data read by the website https://burnycoder.github.io/visualizing-grokking-modular-addition/ (code: {github}):
+The data read by the website https://burnycoder.github.io/visualizing-grokking-modular-addition-in-transformer/ (code: {github}):
 per-checkpoint measurements, loss curves, Fourier spectra, activation geometry and float16 weights of the mainline
 run of Nanda et al. 2023, *Progress measures for grokking via
 mechanistic interpretability* (arXiv:2301.05217), and of our 22 retrained runs (their full checkpoints are in
