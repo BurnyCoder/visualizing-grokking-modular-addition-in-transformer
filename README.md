@@ -4,7 +4,7 @@ An explorable website, and the reproducible pipeline behind it, about the one-la
 addition modulo 113. The network was reverse-engineered by Nanda, Chan, Lieberum, Smith & Steinhardt (2023),
 [*Progress measures for grokking via mechanistic interpretability*](https://arxiv.org/abs/2301.05217).
 
-- **Website:** <https://burnycoder.github.io/visualizing-grokking-modular-addition/>
+- **Website:** <https://burnycoder.github.io/visualizing-grokking-modular-addition-in-transformer/>
   - 22 step-by-step chapters, from "what is a remainder" to the full Fourier-multiplication algorithm;
   - one big dashboard of linked visualizations that you can scrub across training.
 - **Models and data:** Hugging Face collection [*Visualizing grokking modular addition*](https://huggingface.co/collections/BurnyCoder/visualizing-grokking-modular-addition-6ad822354f93a379ba50756a). It contains:
@@ -201,8 +201,8 @@ Data formats are documented in [`docs/data-formats.md`](docs/data-formats.md); m
   - Node.js (tested with 22 and 24) for the JavaScript parity test.
 
 ```bash
-git clone --recurse-submodules https://github.com/BurnyCoder/visualizing-grokking-modular-addition
-cd visualizing-grokking-modular-addition
+git clone --recurse-submodules https://github.com/BurnyCoder/visualizing-grokking-modular-addition-in-transformer
+cd visualizing-grokking-modular-addition-in-transformer
 uv sync --extra cu130          # NVIDIA GPU; use `uv sync --extra cpu` without one
 uv run playwright install chromium   # only for render_report_figures, render_media and browser tests
 cp .env.example .env           # optional: every setting has a default in .env.example
