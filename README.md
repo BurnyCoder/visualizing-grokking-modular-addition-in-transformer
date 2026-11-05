@@ -4,7 +4,7 @@ An explorable website, and the reproducible pipeline behind it, about the one-la
 addition modulo 113. The network was reverse-engineered by Nanda, Chan, Lieberum, Smith & Steinhardt (2023),
 [*Progress measures for grokking via mechanistic interpretability*](https://arxiv.org/abs/2301.05217).
 
-- **Website:** <https://burnycoder.github.io/visualizing-grokking-modular-addition/>
+- **Website:** <https://burnycoder.github.io/visualizing-grokking-modular-addition-in-transformer/>
   - 22 step-by-step chapters, from "what is a remainder" to the full Fourier-multiplication algorithm;
   - one big dashboard of linked visualizations that you can scrub across training.
 - **Models and data:** Hugging Face collection [*Visualizing grokking modular addition*](https://huggingface.co/collections/BurnyCoder/visualizing-grokking-modular-addition-6ad822354f93a379ba50756a). It contains:
@@ -121,8 +121,8 @@ for the preregistered tests. In short:
     it leaves out jointly cost 1.6–2.8× (limit 1.5×).
   - Patching recovers 0.997 [0.995, 0.998] of the logit difference across seeds.
 - **Exploratory:** our seed 0 starts from the paper's initial weights, identical up to float32 rounding (max |Δ| =
-  3.0 × 10⁻⁸). It diverges numerically within ~50 steps,
-  yet ends with the paper's key frequencies.
+  3.0 × 10⁻⁸). Its training loss matches the paper's to 5 significant digits for the first 52 steps and then
+  diverges, yet it ends with the paper's key frequencies (a single same-initialisation pair).
 - **Exploratory dynamics** (gradients, and Adam's step rebuilt from the saved Adam states). During circuit formation the
   training-loss gradient opposes the test-loss gradient. At the end, Adam's loss step and the weight-decay step are
   nearly equal and opposite. Weight decay outweighs the loss step most within 1,000 steps of grokking in 10 of 11 seeds.
@@ -201,8 +201,8 @@ Data formats are documented in [`docs/data-formats.md`](docs/data-formats.md); m
   - Node.js (tested with 22 and 24) for the JavaScript parity test.
 
 ```bash
-git clone --recurse-submodules https://github.com/BurnyCoder/visualizing-grokking-modular-addition
-cd visualizing-grokking-modular-addition
+git clone --recurse-submodules https://github.com/BurnyCoder/visualizing-grokking-modular-addition-in-transformer
+cd visualizing-grokking-modular-addition-in-transformer
 uv sync --extra cu130          # NVIDIA GPU; use `uv sync --extra cpu` without one
 uv run playwright install chromium   # only for render_report_figures, render_media and browser tests
 cp .env.example .env           # optional: every setting has a default in .env.example

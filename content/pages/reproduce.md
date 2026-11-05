@@ -1,10 +1,10 @@
 # Reproduce
 
-Everything on this site is computed by an open pipeline: [github.com/BurnyCoder/visualizing-grokking-modular-addition](https://github.com/BurnyCoder/visualizing-grokking-modular-addition).
+Everything on this site is computed by an open pipeline: [github.com/BurnyCoder/visualizing-grokking-modular-addition-in-transformer](https://github.com/BurnyCoder/visualizing-grokking-modular-addition-in-transformer).
 
 ```
-git clone --recurse-submodules https://github.com/BurnyCoder/visualizing-grokking-modular-addition
-cd visualizing-grokking-modular-addition
+git clone --recurse-submodules https://github.com/BurnyCoder/visualizing-grokking-modular-addition-in-transformer
+cd visualizing-grokking-modular-addition-in-transformer
 uv sync --extra cu130        # or --extra cpu
 uv run grokviz --phases all --skip publish_runs_to_hub,publish_site_data  # download, validate, train, analyse, export, build (no uploads)
 ```
